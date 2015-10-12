@@ -1,12 +1,12 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-ng-app="albumsModule">
 <head>
-	<meta charset="UTF-8">
+    <meta http-equiv='Content-Type' content='text/html; charset=UTF-8'>
 	<title>OE</title>
-    <link href='https://fonts.googleapis.com/css?family=Lato:400,300italic,300,400italic,700,700italic,900,900italic' rel='stylesheet' type='text/css'>
     <link rel="stylesheet" href="css/bootstrap.css">
     <link rel="stylesheet" href="css/bootstrap-theme.css">
     <link rel="stylesheet" href="css/main.css">
+    <script src="js/angular.js"></script>
 </head>
 <body>
     <div class="container">
@@ -29,6 +29,11 @@
     </div>
     <img class="img-responsive" src="img/OkeanElzy_b&w.jpg" alt="OE">
     <div class="container">
+        <section id="info">
+            <p>Океан Ельзи багаторазово визнані публікою й критиками як краща рок-група і краща live-група СНД і Східної Європи.</p>
+            <p>Океан Ельзи - це експресивний, самовідданий концертний драйв, унікальне поєднання справжньої слов'янської мелодійності з потужною роковою енергетикою.</p>
+            <p>Платівки групи завжди резонансні й стають гучною подією. Сольні концерти Океан Ельзи, головною умовою яких є живий звук, незмінно викликають великий інтерес.</p>
+        </section>
         <section id="band">
             <h2>Учасники групи</h2>
             <div class="row">
@@ -62,13 +67,20 @@
         <section id="history">
             <h2>Історія групи</h2>
         </section>
-        <section id="music">
+        <section id="music" data-ng-controller="albumsController">
             <h2>Альбоми</h2>
+            <ul class="list-unstyled">
+                <li class="col-md-3" data-ng-repeat="album in albums">
+                    <img class="img-responsive" src="{{album.logo}}" alt="{{album.title}}">
+                    <p>{{album.title}}</p>
+                </li>
+            </ul>
         </section>
         <section id="video">
             <h2>Кліпи</h2>
         </section>
     </div>
     <script src="js/bootstrap.js"></script>
+    <script src="js/main.js"></script>
 </body>
 </html>

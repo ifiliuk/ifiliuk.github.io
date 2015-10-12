@@ -1,0 +1,121 @@
+{
+  "albums": [
+    {
+      "title": "Там, де нас нема",
+      "year": 1998,
+      "logo": "/img/albums/tam_de_nas_nema.jpg",
+      "songs": [
+        {
+          "title":"Новий день",
+          "duration": "2:48",
+          "source": "URL"
+        },
+        {
+          "title":"Там, де нас нема",
+          "duration": "3:29",
+          "source": "URL"
+        },
+        {
+          "title":"Голос твій",
+          "duration": "3:54",
+          "source": "URL"
+        },
+        {
+          "title":"Позич мені сонце",
+          "duration": "4:06",
+          "source": "URL"
+        },
+        {
+          "title":"Тадж-Махал",
+          "duration": "3:22",
+          "source": "URL"
+        },
+        {
+          "title":"Сумна мелодія",
+          "duration": "4:17",
+          "source": "URL"
+        },
+        {
+          "title":"Поїзд 'Чужа любов'",
+          "duration": "3:59",
+          "source": "URL"
+        },
+        {
+          "title":"Йду на дно",
+          "duration": "3:34",
+          "source": "URL"
+        },
+        {
+          "title":"Вісім",
+          "duration": "3:30",
+          "source": "URL"
+        },
+        {
+          "title":"Ластівка з твого міста",
+          "duration": "3:04",
+          "source": "URL"
+        },
+        {
+          "title":"Ти забула давно",
+          "duration": "4:38",
+          "source": "URL"
+        },
+        {
+          "title":"Long Time Ago",
+          "duration": "3:47",
+          "source": "URL"
+        },
+        {
+          "title":"Колиска вітру",
+          "duration": "3:05",
+          "source": "URL"
+        },
+        {
+          "title":"Годі вже",
+          "duration": "4:29",
+          "source": "URL"
+        },
+        {
+          "title":"Tam, de nas nema [Danilkin remix]",
+          "duration": "4:07",
+          "source": "URL"
+        }
+      ]
+    },
+    {
+      "title": "Янанебібув",
+      "year": 2000,
+      "logo": "/img/albums/ya_na_nebi_buv.jpg"
+    },
+    {
+      "title": "Модель",
+      "year": 2001,
+      "logo": "/img/albums/model.jpg"
+    },
+    {
+      "title": "Суперсиметрія",
+      "year": 2003,
+      "logo": "/img/albums/supersumetria.jpg"
+    },
+    {
+      "title": "Gloria",
+      "year": 2005,
+      "logo": "/img/albums/gloria.jpg"
+    },
+    {
+      "title": "Міра",
+      "year": 2007,
+      "logo": "/img/albums/mira.jpg"
+    },
+    {
+      "title": "Dolce Vita",
+      "year": 2010,
+      "logo": "/img/albums/dolce_vita.jpg"
+    },
+    {
+      "title": "Земля",
+      "year": 2013,
+      "logo": "/img/albums/zemlya.jpg"
+    }
+  ]
+}

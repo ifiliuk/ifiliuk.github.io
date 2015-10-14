@@ -1,3 +1,33 @@
 h1, h2 {
     text-align: center;
 }
+.player-info {
+    position: absolute;
+    background-color: #fff;
+    display: none;
+}
+.list-albums li{
+    overflow: hidden;
+    margin-bottom: 20px;
+}
+.list-albums li:hover > a .album-logo {
+    opacity: 0.3;
+}
+.list-albums li:hover > a .album-title {
+    bottom: 0;
+}
+.album-title {
+    text-align: center;
+    background-color: #333;
+    color: #fff;
+    padding: 10px 25px;
+    margin: 0;
+    position: absolute;
+    display: block;
+    bottom: -50px;
+    transition: all 0.3s;
+    font-size: 20px;
+}
+.album-detail-wrapper h3 {
+    margin: 0;
+}

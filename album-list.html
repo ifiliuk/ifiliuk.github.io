@@ -1,0 +1,8 @@
+<ul class="list-albums list-unstyled row">
+    <li class="col-md-3" data-ng-repeat="album in albums">
+        <a href="#album/{{$index}}">
+            <img class="album-logo img-responsive" src="{{album.logo}}" alt="{{album.title}}">
+            <span class="album-title">{{album.title}}</span>
+        </a>
+    </li>
+</ul>

@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en" data-ng-app="albumsModule">
+<html lang="en" data-ng-app="okeanModule">
 <head>
     <meta http-equiv='Content-Type' content='text/html; charset=UTF-8'>
 	<title>OE</title>
@@ -7,6 +7,7 @@
     <link rel="stylesheet" href="css/bootstrap-theme.css">
     <link rel="stylesheet" href="css/main.css">
     <script src="js/angular.js"></script>
+    <script src="js/angular-route.js"></script>
 </head>
 <body>
     <div class="container">
@@ -34,52 +35,29 @@
             <p>Океан Ельзи - це експресивний, самовідданий концертний драйв, унікальне поєднання справжньої слов'янської мелодійності з потужною роковою енергетикою.</p>
             <p>Платівки групи завжди резонансні й стають гучною подією. Сольні концерти Океан Ельзи, головною умовою яких є живий звук, незмінно викликають великий інтерес.</p>
         </section>
-        <section id="band">
+        <section id="band" data-ng-controller="bandController">
             <h2>Учасники групи</h2>
-            <div class="row">
-                <div class="col-md-2 col-md-offset-1">
-                    <img src="img/band/vakarchuk.jpg" alt="vakarchuk">
-                    <p>Святослав Вакарчук</p>
-                    <span>вокал, автор музики і слів</span>
-                </div>
-                <div class="col-md-2">
-                    <img src="img/band/glinin.jpg" alt="glinin">
-                    <p>Денис Глінін</p>
-                    <span>ударні</span>
-                </div>
-                <div class="col-md-2">
-                    <img src="img/band/dudko.jpg" alt="dudko">
-                    <p>Денис Дудко</p>
-                    <span>бас-гітара</span>
-                </div>
-                <div class="col-md-2">
-                    <img src="img/band/elich.jpg" alt="elich">
-                    <p>Мілош Єліч</p>
-                    <span>клавішні, аранжування</span>
-                </div>
-                <div class="col-md-2">
-                    <img src="img/band/opsenica.jpg" alt="opsenica">
-                    <p>Владімір Опсеніца</p>
-                    <span>гітара</span>
-                </div>
-            </div>
+                <ul class="list-unstyled row">
+                    <li class="col-md-2" data-ng-class="{'col-md-offset-1': $first}" data-ng-repeat="player in band">
+                        <img class="img-responsive" src="{{player.img}}" alt="{{player.name}}">
+                        <p>{{player.name}}</p>
+                        <span>{{player.position}}</span>
+                        <div class="player-info">{{player.info}}</div>
+                    </li>
+                </ul>
         </section>
         <section id="history">
             <h2>Історія групи</h2>
         </section>
         <section id="music" data-ng-controller="albumsController">
             <h2>Альбоми</h2>
-            <ul class="list-unstyled">
-                <li class="col-md-3" data-ng-repeat="album in albums">
-                    <img class="img-responsive" src="{{album.logo}}" alt="{{album.title}}">
-                    <p>{{album.title}}</p>
-                </li>
-            </ul>
+            <div data-ng-view></div>
         </section>
         <section id="video">
             <h2>Кліпи</h2>
         </section>
     </div>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
     <script src="js/bootstrap.js"></script>
     <script src="js/main.js"></script>
 </body>

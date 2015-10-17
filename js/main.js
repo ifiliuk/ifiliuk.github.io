@@ -11,33 +11,31 @@ angular
             })
     })
     .controller("bandController", function($scope, $http){
-        $scope.band = [];
-
-        $http.get('/band.json').
-            success(function(data, status, headers, config) {
-                for(var i=0; i<data["band"].length; i++){
-                    $scope.band.push(data["band"][i]);
-                }
-            }).
-            error(function(data, status, headers, config) {
-                alert('error');
-            });
+        getJsonData($scope, $http, "band");
     })
     .controller("albumsController", function($scope, $http){
-        $scope.albums = [];
-
-        $http.get('/albums.json').
-            success(function(data, status, headers, config) {
-                for(var i=0; i<data["albums"].length; i++){
-                    $scope.albums.push(data["albums"][i]);
-                }
-            }).
-            error(function(data, status, headers, config) {
-                alert('error');
-            });
-
+        getJsonData($scope, $http, "albums");
+        $scope.setCurrentSong = function(path){
+            $scope.currentSong = path;
+        }
     })
     .controller("albumDetail", function($scope, $routeParams){
         $scope.album = $scope.albums[$routeParams.index];
         $scope.songs = $scope.album["songs"];
     });
+
+function getJsonData(scope, http, jsonData){
+    scope[jsonData] = [];
+
+    http.get('/' + jsonData + '.json').
+        success(function(data, status, headers, config) {
+            for(var i=0; i<data[jsonData].length; i++){
+                scope[jsonData].push(data[jsonData][i]);
+            }
+        }).
+        error(function(data, status, headers, config) {
+            alert('error');
+        });
+
+    return scope;
+}

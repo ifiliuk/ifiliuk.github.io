@@ -39,7 +39,7 @@
             <h2>Учасники групи</h2>
                 <ul class="list-unstyled row">
                     <li class="col-md-2" data-ng-class="{'col-md-offset-1': $first}" data-ng-repeat="player in band">
-                        <img class="img-responsive" src="{{player.img}}" alt="{{player.name}}">
+                        <img class="img-responsive" data-ng-src="{{player.img}}" alt="{{player.name}}">
                         <p>{{player.name}}</p>
                         <span>{{player.position}}</span>
                         <div class="player-info">{{player.info}}</div>
@@ -50,6 +50,7 @@
             <h2>Історія групи</h2>
         </section>
         <section id="music" data-ng-controller="albumsController">
+            <audio id="audio-player" autoplay controls data-ng-src="{{currentSong}}"></audio>
             <h2>Альбоми</h2>
             <div data-ng-view></div>
         </section>

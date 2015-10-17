@@ -1,18 +1,18 @@
 <a href="#/">< всі альбоми</a>
 
 <div class="row album-detail-wrapper">
-    <div class="col-md-6">
-        <img class="img-responsive" src="{{album.logo}}" alt="{{album.title}}">
+    <div class="col-md-5">
+        <img class="img-responsive" data-ng-src="{{album.logo}}" alt="{{album.title}}">
     </div>
-    <div class="col-md-6">
+    <div class="col-md-7">
         <h3 class="">{{album.title}}</h3>
         <ul class="list-unstyled">
             <li data-ng-repeat="song in songs">
-                <span>{{$index + 1}}. </span>
-                <a href="">
-                    <span>{{song.title}} </span>
+                <span class="col-md-1">{{$index + 1}}. </span>
+                <a href="" data-ng-click="setCurrentSong(song.source)">
+                    <span class="col-md-9">{{song.title}}</span>
                 </a>
-                <span>{{song.duration}}</span>
+                <span class="col-md-2">{{song.duration}}</span>
             </li>
         </ul>
     </div>

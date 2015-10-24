@@ -10,9 +10,6 @@ angular
                 templateUrl: '/album-list.html'
             })
     })
-    .controller("bandController", function($scope, $http){
-        getJsonData($scope, $http, "band");
-    })
     .controller("albumsController", function($scope, $http){
         getJsonData($scope, $http, "albums");
         $scope.setCurrentSong = function(path){

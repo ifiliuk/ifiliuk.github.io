@@ -10,53 +10,19 @@
     <script src="js/angular-route.js"></script>
 </head>
 <body>
-    <div class="container">
-        <nav class="navbar navbar-default">
-            <div class="container-fluid">
-                <div class="collapse navbar-collapse">
-                    <ul class="nav navbar-nav">
-                        <li><a href="#band">Учасники</a></li>
-                        <li><a href="#history">Історія</a></li>
-                        <li><a href="#music">Альбоми</a></li>
-                        <li><a href="#video">Кліпи</a></li>
-                    </ul>
-                </div>
-            </div>
-
-        </nav>
-        <h1>
-            Сайт буде присвячений творчому шляху Океану Ельзи!
-        </h1>
+    <div class="start-overlay">
+        <div class="loading-logo-wrapper">
+            <span class="spinner-section"></span>
+        </div>
     </div>
-    <img class="img-responsive" src="img/OkeanElzy_b&w.jpg" alt="OE">
-    <div class="container">
-        <section id="info">
-            <p>Океан Ельзи багаторазово визнані публікою й критиками як краща рок-група і краща live-група СНД і Східної Європи.</p>
-            <p>Океан Ельзи - це експресивний, самовідданий концертний драйв, унікальне поєднання справжньої слов'янської мелодійності з потужною роковою енергетикою.</p>
-            <p>Платівки групи завжди резонансні й стають гучною подією. Сольні концерти Океан Ельзи, головною умовою яких є живий звук, незмінно викликають великий інтерес.</p>
-        </section>
-        <section id="band" data-ng-controller="bandController">
-            <h2>Учасники групи</h2>
-                <ul class="list-unstyled row">
-                    <li class="col-md-2" data-ng-class="{'col-md-offset-1': $first}" data-ng-repeat="player in band">
-                        <img class="img-responsive" data-ng-src="{{player.img}}" alt="{{player.name}}">
-                        <p>{{player.name}}</p>
-                        <span>{{player.position}}</span>
-                        <div class="player-info">{{player.info}}</div>
-                    </li>
-                </ul>
-        </section>
-        <section id="history">
-            <h2>Історія групи</h2>
-        </section>
-        <section id="music" data-ng-controller="albumsController">
-            <audio id="audio-player" autoplay controls data-ng-src="{{currentSong}}"></audio>
-            <h2>Альбоми</h2>
-            <div data-ng-view></div>
-        </section>
-        <section id="video">
-            <h2>Кліпи</h2>
-        </section>
+    <div class="main-container">
+        <div class="container section-wrapper">
+            <section id="music" class="albums-wrapper" data-ng-controller="albumsController">
+                <!--<audio id="audio-player" autoplay controls data-ng-src="{{currentSong}}"></audio>-->
+                <h1>Альбоми</h1>
+                <div data-ng-view></div>
+            </section>
+        </div>
     </div>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
     <script src="js/bootstrap.js"></script>

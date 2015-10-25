@@ -9,15 +9,15 @@
     <script src="js/angular.js"></script>
     <script src="js/angular-route.js"></script>
 </head>
-<body>
-    <div class="start-overlay">
+<body data-ng-controller="albumsController">
+    <div class="start-overlay" data-ng-hide="loadedAlbums">
         <div class="loading-logo-wrapper">
             <span class="spinner-section"></span>
         </div>
     </div>
-    <div class="main-container">
+    <div class="main-container" data-ng-show="loadedAlbums">
         <div class="container section-wrapper">
-            <section id="music" class="albums-wrapper" data-ng-controller="albumsController">
+            <section id="music" class="albums-wrapper">
                 <!--<audio id="audio-player" autoplay controls data-ng-src="{{currentSong}}"></audio>-->
                 <h1>Альбоми</h1>
                 <div data-ng-view></div>

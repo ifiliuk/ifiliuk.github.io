@@ -66,8 +66,26 @@ h1 {
     display: none;
 }
 
-.currentSong {
-    background: #E2C8A4;
+.list-songs div,
+.list-songs a {
+    font-size: 16px;
+    color: #000;
+}
+.list-songs a:hover,
+.list-songs a:focus {
+   text-decoration: none;
+}
+.song-title {
+     position: relative;
+ }
+.song-title i {
+    position: absolute;
+    line-height: 22px;
+    left: -7px;
+    display: none;
+}
+.currentSong i {
+    display: block;
 }
 /************************************/
 .loading-logo-wrapper {

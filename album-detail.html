@@ -5,14 +5,21 @@
         <img class="img-responsive" data-ng-src="{{album.logo}}" alt="{{album.title}}">
     </div>
     <div class="col-md-7">
-        <h2 class="">{{album.title}}</h2>
-        <ul class="list-unstyled">
+        <h2 class="">{{album.title}} ({{album.year}})</h2>
+        <ul class="list-songs list-unstyled">
             <li data-ng-repeat="song in songs" class="clearfix" data-ng-class="{currentSong: song == playingSong}">
-                <span class="col-md-1">{{$index + 1}}. </span>
-                <a href="" data-ng-click="setPlayingSong(song)">
-                    <span class="col-md-9">{{song.title}}</span>
-                </a>
-                <span class="col-md-2">{{song.duration}}</span>
+                <div class="col-md-1">
+                    <span>{{$index + 1}}.</span>
+                </div>
+                <div class="col-md-9 song-title">
+                    <i class="fa fa-music"></i>
+                    <a href="" data-ng-click="setPlayingSong(song)">
+                        <span>{{song.title}}</span>
+                    </a>
+                </div>
+                <div class="col-md-2 text-right">
+                    <span>{{song.duration}}</span>
+                </div>
             </li>
         </ul>
     </div>

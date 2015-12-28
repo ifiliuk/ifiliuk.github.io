@@ -9,7 +9,7 @@
         <ul class="list-unstyled">
             <li data-ng-repeat="song in songs">
                 <span class="col-md-1">{{$index + 1}}. </span>
-                <a href="" data-ng-click="setCurrentSong(song.source)">
+                <a href="" data-ng-click="setCurrentSong(song)">
                     <span class="col-md-9">{{song.title}}</span>
                 </a>
                 <span class="col-md-2">{{song.duration}}</span>

@@ -8,77 +8,77 @@
         {
           "title":"Новий день",
           "duration": "2:48",
-          "source": "/mp3/novuy_den.mp3"
+          "source": "/tam_de_nas_nema/01%20%D0%9D%D0%BE%D0%B2%D0%B8%D0%B9%20%D0%B4%D0%B5%D0%BD%D1%8C.mp3"
         },
         {
           "title":"Там, де нас нема",
           "duration": "3:29",
-          "source": "/mp3/tam_de_nas_nema.mp3"
+          "source": "/tam_de_nas_nema/02%20%D0%A2%D0%B0%D0%BC%2C%20%D0%B4%D0%B5%20%D0%BD%D0%B0%D1%81%20%D0%BD%D0%B5%D0%BC%D0%B0.mp3"
         },
         {
           "title":"Голос твій",
           "duration": "3:54",
-          "source": "URL"
+          "source": "/tam_de_nas_nema/03%20%D0%93%D0%BE%D0%BB%D0%BE%D1%81%20%D1%82%D0%B2i%D0%B9.mp3"
         },
         {
           "title":"Позич мені сонце",
           "duration": "4:06",
-          "source": "URL"
+          "source": "/tam_de_nas_nema/04%20%D0%9F%D0%BE%D0%B7%D0%B8%D1%87%20%D0%BC%D0%B5%D0%BDi%20%D1%81%D0%BE%D0%BD%D1%86%D0%B5.mp3"
         },
         {
           "title":"Тадж-Махал",
           "duration": "3:22",
-          "source": "URL"
+          "source": "/tam_de_nas_nema/05%20%D0%A2%D0%B0%D0%B4%D0%B6-%D0%9C%D0%B0%D1%85%D0%B0%D0%BB.mp3"
         },
         {
           "title":"Сумна мелодія",
           "duration": "4:17",
-          "source": "URL"
+          "source": "/tam_de_nas_nema/06%20%D0%A1%D1%83%D0%BC%D0%BD%D0%B0%20%D0%BC%D0%B5%D0%BB%D0%BE%D0%B4i%D1%8F.mp3"
         },
         {
           "title":"Поїзд 'Чужа любов'",
           "duration": "3:59",
-          "source": "URL"
+          "source": "/tam_de_nas_nema/07%20%D0%9F%D0%BE%D1%97%D0%B7%D0%B4%20%27%D1%87%D1%83%D0%B6%D0%B0%20%D0%BB%D1%8E%D0%B1%D0%BE%D0%B2%27.mp3"
         },
         {
           "title":"Йду на дно",
           "duration": "3:34",
-          "source": "URL"
+          "source": "/tam_de_nas_nema/08%20%D0%99%D0%B4%D1%83%20%D0%BD%D0%B0%20%D0%B4%D0%BD%D0%BE.mp3"
         },
         {
           "title":"Вісім",
           "duration": "3:30",
-          "source": "URL"
+          "source": "/tam_de_nas_nema/09%20%D0%92i%D1%81i%D0%BC.mp3"
         },
         {
           "title":"Ластівка з твого міста",
           "duration": "3:04",
-          "source": "URL"
+          "source": "/tam_de_nas_nema/10%20%D0%9B%D0%B0%D1%81%D1%82i%D0%B2%D0%BA%D0%B0%20%D0%B7%20%D0%BC%D0%BE%D0%B3%D0%BE%20%D0%BCi%D1%81%D1%82%D0%B0.mp3"
         },
         {
           "title":"Ти забула давно",
           "duration": "4:38",
-          "source": "URL"
+          "source": "/tam_de_nas_nema/11%20%D0%A2%D0%B8%20%D0%B7%D0%B0%D0%B1%D1%83%D0%BB%D0%B0%20%D0%B4%D0%B0%D0%B2%D0%BD%D0%BE.mp3"
         },
         {
           "title":"Long Time Ago",
           "duration": "3:47",
-          "source": "URL"
+          "source": "/tam_de_nas_nema/12%20Long%20Time%20Ago.mp3"
         },
         {
           "title":"Колиска вітру",
           "duration": "3:05",
-          "source": "URL"
+          "source": "/tam_de_nas_nema/13%20%D0%9A%D0%BE%D0%BB%D0%B8%D1%81%D0%BA%D0%B0%20%D0%B2i%D1%82%D1%80%D1%83%20%28%D0%B1%D0%BE%D0%BD%D1%83%D1%81-%D1%82%D1%80%D0%B5%D0%BA%29.mp3"
         },
         {
           "title":"Годі вже",
           "duration": "4:29",
-          "source": "URL"
+          "source": "/tam_de_nas_nema/14%20%D0%93%D0%BE%D0%B4i%20%D0%B2%D0%B6%D0%B5%20%28%D0%B1%D0%BE%D0%BD%D1%83%D1%81-%D1%82%D1%80%D0%B5%D0%BA%29.mp3"
         },
         {
           "title":"Tam, de nas nema [Danilkin remix]",
           "duration": "4:07",
-          "source": "URL"
+          "source": "/tam_de_nas_nema/15%20%D0%A2%D0%B0%D0%BC%2C%20%D0%B4%D0%B5%20%D0%BD%D0%B0%D1%81%20%D0%BD%D0%B5%D0%BC%D0%B0%20%28Danilkin%20%D0%94%D0%B5%20%D0%B2%D0%B8%20%D1%94%20remix%29%20%28%D0%B1%D0%BE%D0%BD%D1%83%D1%81-%D1%82%D1%80%D0%B5%D0%BA%29.mp3"
         }
       ]
     },

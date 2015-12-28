@@ -7,9 +7,9 @@
     <div class="col-md-7">
         <h2 class="">{{album.title}}</h2>
         <ul class="list-unstyled">
-            <li data-ng-repeat="song in songs">
+            <li data-ng-repeat="song in songs" class="clearfix" data-ng-class="{currentSong: song == playingSong}">
                 <span class="col-md-1">{{$index + 1}}. </span>
-                <a href="" data-ng-click="setCurrentSong(song)">
+                <a href="" data-ng-click="setPlayingSong(song)">
                     <span class="col-md-9">{{song.title}}</span>
                 </a>
                 <span class="col-md-2">{{song.duration}}</span>

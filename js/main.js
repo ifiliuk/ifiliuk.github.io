@@ -18,8 +18,9 @@ angular
     .controller("albumsController", function($scope, $http, $timeout){
         $scope.loadedAlbums = false;
         getJsonData($scope, $http, $timeout, "albums");
-        $scope.setCurrentSong = function(currentSong){
-            $scope.currentSongPath = songsStorage + currentSong.source;
+        $scope.setPlayingSong = function(song){
+            $scope.playingSong = song;
+            $scope.playingSongPath = songsStorage + song.source;
         }
     })
     .controller("albumDetail", function($scope, $routeParams){

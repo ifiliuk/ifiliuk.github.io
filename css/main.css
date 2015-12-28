@@ -62,7 +62,13 @@ h1 {
     height: 100%;
     position: relative;
 }
+#audio-player {
+    display: none;
+}
 
+.currentSong {
+    background: #E2C8A4;
+}
 /************************************/
 .loading-logo-wrapper {
     position: absolute;

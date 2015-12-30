@@ -19,13 +19,14 @@
     <div class="main-container" data-ng-show="loadedAlbums">
         <div class="container section-wrapper">
             <section id="music" class="albums-wrapper">
-                <audio id="audio-player" autoplay controls data-ng-src="{{playingSongPath}}"></audio>
+                <audio id="audio-player" audio-load data-ng-src="{{playingSongPath}}"></audio>
                 <div data-ng-view></div>
             </section>
         </div>
     </div>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
     <script src="js/bootstrap.js"></script>
+    <script src="js/audiojs/audio.min.js"></script>
     <script src="js/main.js"></script>
 </body>
 </html>

@@ -62,9 +62,6 @@ h1 {
     height: 100%;
     position: relative;
 }
-#audio-player {
-    display: none;
-}
 
 .list-songs div,
 .list-songs a {

@@ -26,6 +26,22 @@ angular
     .controller("albumDetail", function($scope, $routeParams){
         $scope.album = $scope.albums[$routeParams.index];
         $scope.songs = $scope.album["songs"];
+    })
+    .directive('audioLoad', function() {
+        return {
+            restrict: 'A',
+            link: function(scope, element, attrs) {
+                var audio = false;
+                attrs.$observe('src', function() {
+                    if (!audio){
+                        audio = audiojs.createAll({"autoplay": true});
+                    } else {
+                        audio[0].load(scope.playingSongPath);
+                        audio[0].play();
+                    }
+                });
+            }
+        };
     });
 
 function getJsonData(scope, http, timeout, jsonData){

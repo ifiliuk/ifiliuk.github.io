@@ -9,18 +9,22 @@
     <link rel="stylesheet" href="css/main.css">
     <script src="js/angular.js"></script>
     <script src="js/angular-route.js"></script>
+    <script src="js/angular-animate.js"></script>
 </head>
-<body data-ng-controller="albumsController">
-    <div class="start-overlay" data-ng-hide="loadedAlbums">
+<body data-ng-controller="albumsCtrl">
+    <div class="start-overlay init-animate" data-ng-hide="loadedAlbums">
         <div class="loading-logo-wrapper">
             <span class="spinner-section"></span>
         </div>
     </div>
-    <div class="main-container" data-ng-show="loadedAlbums">
+    <div class="main-container init-animate" data-ng-show="loadedAlbums">
+        <div class="container audio-wrapper" data-ng-controller="audioCtrl">
+            <audio id="audio-player" audio-load data-ng-src="{{playingSongPath}}"></audio>
+            <p>{{playingSong.title}}</p>
+        </div>
         <div class="container section-wrapper">
             <section id="music" class="albums-wrapper">
-                <audio id="audio-player" audio-load data-ng-src="{{playingSongPath}}"></audio>
-                <div data-ng-view></div>
+                <div data-ng-view class="view-animate"></div>
             </section>
         </div>
     </div>

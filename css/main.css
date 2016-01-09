@@ -42,6 +42,9 @@ h1 {
     margin: 0;
     text-align: center;
 }
+.all-albums {
+    padding: 10px 0;
+}
 .main-container {
     width: 100%;
     height: 100%;
@@ -61,11 +64,67 @@ h1 {
     position: relative;
     height: 100%;
 }
-.audio-wrapper {
+.player {
     position: absolute;
-    /*left: 50%;*/
-    /*transform: translateX(-50%);*/
-    /*z-index: 1;*/
+    top: 50%;
+    transform: translateY(-50%);
+    left: 0;
+    background: rgba(45, 40, 40, 0.7);
+}
+.player .playlist {
+    padding: 10px 0;
+    margin: 0;
+}
+.player .playlist .song-title {
+    padding: 0 15px;
+}
+.player .playlist .song-title i {
+    line-height: 19px;
+}
+.player .playlist li:hover {
+    background: #565353;
+}
+.player span {
+    color: #fff;
+}
+.player .playing-song {
+    text-align: center;
+    padding: 10px 0;
+    margin: 0;
+    color: #fff;
+    font-size: 18px;
+}
+.audiojs {
+    background: #404040;
+}
+.audiojs .play-pause {
+    width: auto;
+}
+.hide-player i,
+.show-player {
+    position: absolute;
+    cursor: pointer;
+    font-size: 20px;
+    color: #fff;
+    text-align: center;
+}
+.hide-player i {
+    top: 3px;
+    right: 3px;
+    width: 20px;
+    height: 20px;
+}
+.show-player {
+    left: 0;
+    top: 50%;
+    margin-top: -25px;
+    background: rgba(45, 40, 40, 0.7);
+    width: 50px;
+    height: 50px;
+    line-height: 50px;
+}
+.show-player:hover {
+    background: rgb(45, 40, 40);
 }
 .start-overlay {
     width: 100%;
@@ -79,20 +138,33 @@ h1 {
     color: #000;
 }
 .list-songs a:hover,
-.list-songs a:focus {
+.list-songs a:focus,
+.playlist a:hover,
+.playlist a:focus {
    text-decoration: none;
+}
+.list-songs li:hover {
+    background: #eee;
 }
 .song-title {
      position: relative;
  }
 .song-title i {
     position: absolute;
+    top: 0;
     line-height: 22px;
-    left: -7px;
     display: none;
 }
-.currentSong i {
+.song-title .fa-plus {
+    left: -7px;
+}
+.song-title .fa-times {
+    right: 20px;
+}
+.list-songs li:hover i,
+.playlist li:hover i {
     display: block;
+    cursor: pointer;
 }
 .view-animate,
 .init-animate {
@@ -102,7 +174,9 @@ h1 {
     bottom: 0;
     right: 0;
 }
-.view-animate.ng-enter, .view-animate.ng-leave {
+.view-animate.ng-enter, .view-animate.ng-leave,
+.player.ng-hide-add, .player.ng-hide-remove,
+.show-player.ng-hide-add, .show-player.ng-hide-remove {
     transition:all 1s;
 }
 .init-animate.ng-hide-add, .init-animate.ng-hide-remove {
@@ -117,6 +191,12 @@ h1 {
 .view-animate.ng-enter.ng-enter-active {
     top: 0;
     opacity: 1;
+}
+.player.ng-hide{
+    left: -460px;
+}
+.show-player.ng-hide{
+    left: -50px;
 }
 /************************************/
 .loading-logo-wrapper {

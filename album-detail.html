@@ -1,5 +1,3 @@
-<a href="#/">всі альбоми</a>
-
 <div class="row album-detail-wrapper">
     <div class="col-md-5">
         <img class="img-responsive" data-ng-src="{{album.logo}}" alt="{{album.title}}">
@@ -12,8 +10,8 @@
                     <span>{{$index + 1}}.</span>
                 </div>
                 <div class="col-md-9 song-title">
-                    <i class="fa fa-music"></i>
-                    <a href="" data-ng-click="setPlayingSong($index)">
+                    <i class="fa fa-plus" data-ng-click="addToPlaylist(song)" title="Додати в плейліст" remove-after-added></i>
+                    <a href="" data-ng-click="setPlayingSong(song)">
                         <span>{{song.title}}</span>
                     </a>
                 </div>
@@ -23,4 +21,7 @@
             </li>
         </ul>
     </div>
+</div>
+<div class="all-albums">
+    <a href="#/">Всі альбоми</a>
 </div>

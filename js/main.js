@@ -47,16 +47,45 @@ angular
         audioData.songs = $scope.songs;
     })
     .controller("audioCtrl", function($scope, $rootScope, audioData){
-        $rootScope.setPlayingSong = function(index){
-            $scope.playingSong = audioData.songs[index];
-            $scope.playingSongPath = songsStorage + $scope.playingSong.source;
-            $scope.index = index;
+        $scope.playlist = [];
+        $scope.playerHided = false;
+        $rootScope.setPlayingSong = function(song){
+            $scope.playingSong = song;
+            $scope.playingSongPath = songsStorage + song.source;
+            $scope.showPlayer();
+            $scope.$apply();
+        };
+        $rootScope.addToPlaylist = function(song){
+            $scope.playlist.push(song);
+        };
+        $rootScope.removeFromPlaylist = function(index){
+            $scope.playlist.splice(index,1);
         };
         $scope.callNextTrack = function(){
-            if ( $scope.index < audioData.songs.length ){
-                $rootScope.setPlayingSong($scope.index+1);
+            var playlistEnd = false;
+            if ($scope.playlist.length){
+                for (var i=0; i<$scope.playlist.length; i++){
+                    if (($scope.playlist[i] === $scope.playingSong)&&(i !== $scope.playlist.length)){
+                        $rootScope.setPlayingSong($scope.playlist[i+1]);
+                        playlistEnd = false;
+                        break;
+                    } else {
+                        playlistEnd = true;
+                    }
+                }
+                if (playlistEnd){
+                    $rootScope.setPlayingSong($scope.playlist[0]);
+                }
             }
-        }
+        };
+        $scope.hidePlayer = function(){
+            $scope.playerShowed = false;
+            $scope.playerHided = true;
+        };
+        $scope.showPlayer = function(){
+            $scope.playerShowed = true;
+            $scope.playerHided = false;
+        };
     })
     .directive('audioLoad', function() {
         return {
@@ -78,5 +107,17 @@ angular
                 });
             }
         };
+    })
+    .directive("removeAfterAdded", function() {
+        return {
+            restrict: 'A',
+            link:function(scope,element,attrs)
+            {
+                element.bind("click",function() {
+                    element.remove();
+                });
+            }
+        }
+
     });
 

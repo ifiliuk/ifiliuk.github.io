@@ -18,14 +18,16 @@
         </div>
     </div>
     <div class="main-container init-animate" data-ng-show="loadedAlbums">
-        <div class="container audio-wrapper" data-ng-controller="audioCtrl">
-            <audio id="audio-player" audio-load data-ng-src="{{playingSongPath}}"></audio>
-            <p>{{playingSong.title}}</p>
-        </div>
         <div class="container section-wrapper">
             <section id="music" class="albums-wrapper">
                 <div data-ng-view class="view-animate"></div>
             </section>
+        </div>
+        <div class="audio-wrapper" data-ng-controller="audioCtrl">
+            <div data-ng-include="'audio.html'"></div>
+            <div class="show-player" data-ng-show="playerHided">
+                <i class="fa fa-music" title="Показати плеєр" data-ng-click="showPlayer()"></i>
+            </div>
         </div>
     </div>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>

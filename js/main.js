@@ -57,8 +57,10 @@ angular
         };
         $rootScope.addToPlaylist = function(song){
             $scope.playlist.push(song);
+            song.addedToPlaylist = true;
         };
         $rootScope.removeFromPlaylist = function(index){
+            $scope.playlist[index]["addedToPlaylist"] = false;
             $scope.playlist.splice(index,1);
         };
         $scope.callNextTrack = function(){
@@ -107,17 +109,5 @@ angular
                 });
             }
         };
-    })
-    .directive("removeAfterAdded", function() {
-        return {
-            restrict: 'A',
-            link:function(scope,element,attrs)
-            {
-                element.bind("click",function() {
-                    element.remove();
-                });
-            }
-        }
-
     });
 

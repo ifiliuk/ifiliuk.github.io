@@ -10,7 +10,7 @@
                     <span>{{$index + 1}}.</span>
                 </div>
                 <div class="col-md-9 song-title">
-                    <i class="fa fa-plus" data-ng-click="addToPlaylist(song)" title="Додати в плейліст" remove-after-added></i>
+                    <i class="fa fa-plus" data-ng-click="addToPlaylist(song)" title="Додати в плейліст" data-ng-hide="song.addedToPlaylist"></i>
                     <a href="" data-ng-click="setPlayingSong(song)">
                         <span>{{song.title}}</span>
                     </a>
